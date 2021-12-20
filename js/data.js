@@ -17,7 +17,8 @@ function update(){
         hour = '0' + hour;
     }
     let timestring = `${hour}:${minute}:${second}`;
-    time.innerHTML = timestring;
+    time.innerHTML = changeNumbers(timestring);
+
     // date.innerHTML = now.toLocaleDateString('fa-IR');
 
     // date.innerHTML = now.toLocaleDateString('fa-IR' , {
@@ -36,4 +37,17 @@ function update(){
     date.innerHTML = dateString;
 }
 
+function changeNumbers(input){
+    const farsiDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹',] ;
+    let output = '';
+    
+    for(let i = 0 ; i < input.length ; i++){
+        if(input[i]>= 0 && input[i]<=9){
+            output += farsiDigits[input[i]];
+        }else{
+            output += input[i];
+        }
+    }
+    return output;
+}
 
