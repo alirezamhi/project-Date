@@ -1,0 +1,17 @@
+*{
+    padding: 0PX;
+    margin: 0px;
+}
+.main{
+    direction: rtl;
+    font-size: bold;
+    text-align: center;
+    background-color: rgb(0, 153, 255);
+    padding: 5rem;
+}
+#clock{
+    font-size: 4rem;
+}
+#data{
+    font-size: 4rem;
+}
